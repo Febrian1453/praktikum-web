@@ -1,0 +1,28 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+<title>Metode POST</title>
+</head>
+
+<body>
+
+<form action = "<?php $_SERVER['PHP_SELF'];?>" method="post">
+
+nama <br />
+<input type="text" name="nama" /> <br />
+
+umur <br />
+<input type="text" name="umur" /> <br />
+
+<input type="submit" value="OK" />
+</form>
+
+<?php
+if (isset($_POST['nama']) and ($_POST['umur'])){
+echo 'Saya, ' . $_POST['nama'] . 'berumur' . $_POST['umur'];
+}
+?>
+
+</body>
+</html>
